@@ -1,0 +1,25 @@
+{
+  "name" : "calderawp/cwp-edd-sl-plus",
+  "type" : "wordpress-plugin",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type" : "vcs",
+      "url" : "https://github.com/humanmade/hm-rewrite"
+    },
+    {
+      "type": "git",
+      "url" : "https://github.com/CalderaWP/edd-sl-queries"
+    }
+  ],
+  "require": {
+    "humanmade/hm-rewrite" : "*",
+    "calderawp/edd-sl-queries" : "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "calderawp\\eddslplus\\": "classes"
+    }
+  }
+}
