@@ -22,6 +22,7 @@ class download extends license {
 
 		$file = edd_get_download_file_url( $payment_key, $email, $file_key, $download_id );
 
+
 		if( filter_var( $file, FILTER_VALIDATE_URL ) ){
 			return $file;
 		}else{

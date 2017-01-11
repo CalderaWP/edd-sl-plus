@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ae699d2d7b3b1bf7b38349d5a7ac37e5",
-    "content-hash": "30e45443245c0398b691871530da0c45",
+    "hash": "fe3602eb240bb006b6db3c89c45ec205",
+    "content-hash": "5d837906d708610a409531efc6245328",
     "packages": [
         {
-            "name": "calderawp/edd-sl-queries",
-            "version": "dev-master",
+            "name": "calderawp/cf-edd-fields",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/CalderaWP/edd-sl-queries",
-                "reference": "77dcf71ba196187fa8024ec8134a2bf9a84f9891"
+                "url": "https://github.com/CalderaWP/cf-edd-fields",
+                "reference": "307926c5e9d674473cd6bf0db3274b6af42b9e32"
             },
             "require": {
-                "php": ">=7.0.0"
+                "php": ">=5.4.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "\\CalderaWP\\EDD\\SL\\": "src"
+                    "calderawp\\cfeddfields\\": "src"
                 }
             },
             "license": [
@@ -30,158 +30,12 @@
             "authors": [
                 {
                     "name": "Josh Pollock",
-                    "homepage": "https://CalderaWP.com",
+                    "homepage": "https://JoshPress.net",
                     "role": "Developer"
                 }
             ],
-            "description": "Useful queries for Easy Digital Downloads Software Licensing.",
-            "keywords": [
-                "wordpress"
-            ],
-            "time": "2016-12-13 04:15:39"
-        },
-        {
-            "name": "composer/installers",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0"
-            },
-            "replace": {
-                "roundcube/plugin-installer": "*",
-                "shama/baton": "*"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Composer\\Installers\\Plugin",
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Installers\\": "src/Composer/Installers"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
-            "description": "A multi-framework Composer library installer",
-            "homepage": "https://composer.github.io/installers/",
-            "keywords": [
-                "Craft",
-                "Dolibarr",
-                "Hurad",
-                "ImageCMS",
-                "MODX Evo",
-                "Mautic",
-                "OXID",
-                "Plentymarkets",
-                "RadPHP",
-                "SMF",
-                "Thelia",
-                "WolfCMS",
-                "agl",
-                "aimeos",
-                "annotatecms",
-                "attogram",
-                "bitrix",
-                "cakephp",
-                "chef",
-                "cockpit",
-                "codeigniter",
-                "concrete5",
-                "croogo",
-                "dokuwiki",
-                "drupal",
-                "elgg",
-                "expressionengine",
-                "fuelphp",
-                "grav",
-                "installer",
-                "joomla",
-                "kohana",
-                "laravel",
-                "lithium",
-                "magento",
-                "mako",
-                "mediawiki",
-                "modulework",
-                "moodle",
-                "phpbb",
-                "piwik",
-                "ppi",
-                "puppet",
-                "reindex",
-                "roundcube",
-                "shopware",
-                "silverstripe",
-                "symfony",
-                "typo3",
-                "wordpress",
-                "yawik",
-                "zend",
-                "zikula"
-            ],
-            "time": "2016-08-13 20:53:52"
-        },
-        {
-            "name": "humanmade/hm-rewrite",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/humanmade/hm-rewrite.git",
-                "reference": "af3951df750163569beef36309630320a95ad688"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/humanmade/hm-rewrite/zipball/af3951df750163569beef36309630320a95ad688",
-                "reference": "af3951df750163569beef36309630320a95ad688",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=5.2"
-            },
-            "type": "wordpress-muplugin",
-            "license": [
-                "GPLv2"
-            ],
-            "authors": [
-                {
-                    "name": "Human Made",
-                    "email": "support@humanmade.co.uk",
-                    "homepage": "http://hmn.md/"
-                }
-            ],
-            "description": "HM_Rewrite is a wrapper for the WordPress WP Rewrite system. http://hmn.md/wordpress-rewrite-rules-hm-core-style/",
-            "support": {
-                "source": "https://github.com/humanmade/hm-rewrite/tree/master",
-                "issues": "https://github.com/humanmade/hm-rewrite/issues"
-            },
-            "time": "2016-09-15 15:12:50"
+            "description": "Field auto-population shared between",
+            "time": "2017-01-10 17:08:48"
         }
     ],
     "packages-dev": [],
