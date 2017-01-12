@@ -20,6 +20,11 @@ add_action( 'plugins_loaded', function(){
 		return $view->content();
 	});
 
+	/** Setup download by name field */
+	add_action( 'init', function(){
+		\calderawp\eddslplus\cf\init::add_hooks();
+	});
+
 }, 2 );
 
 

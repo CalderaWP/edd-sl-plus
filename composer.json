@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "calderawp/cf-edd-fields": "1.0.1"
+    "calderawp/cf-edd-fields": "1.1.0"
   },
   "autoload": {
     "psr-4": {
