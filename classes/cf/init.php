@@ -1,16 +1,22 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: josh
- * Date: 1/10/17
- * Time: 9:11 PM
- */
+
 
 namespace calderawp\eddslplus\cf;
 
-
+/**
+ * Class init
+ *
+ * Make Caldera Forms processors go
+ *
+ * @package calderawp\eddslplus\cf
+ */
 class init {
 
+	/**
+	 * Slug for processor
+	 *
+	 * @var string
+	 */
 	protected static $slug = 'cwp-edd-sl-plus';
 
 	public static function setup_processors(){
@@ -18,6 +24,11 @@ class init {
 		new processor( self::config_by_code(), self::fields_by_code(), self::$slug );
 	}
 
+	/**
+	 * Field for procesor
+	 *
+	 * @return array
+	 */
 	public static function fields_by_code(){
 		return [
 			[
@@ -41,6 +52,11 @@ class init {
 		];
 	}
 
+	/**
+	 * Config for processor
+	 *
+	 * @return array
+	 */
 	public static function config_by_code(){
 		return [
 			'name' => __( 'EDD Licensed Downloader', 'cwp-edd-sl-plus' ),

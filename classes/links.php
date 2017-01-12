@@ -1,14 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: josh
- * Date: 1/10/17
- * Time: 9:18 PM
- */
 
 namespace calderawp\eddslplus;
 
-
+/**
+ * Class links
+ *
+ * Links to our
+ * @package calderawp\eddslplus
+ */
 class links {
 
 
@@ -18,6 +17,10 @@ class links {
 
 	public static function download( $code ){
 		return home_url( sprintf( '/%s/%s/%s' ), endpoints::ROOT, $code, endpoints::DOWNLOAD );
+	}
+
+	public static function download_alt( $code ){
+		return add_query_arg( 'code', $code, home_url( endpoints::ROOT ) );
 	}
 
 }

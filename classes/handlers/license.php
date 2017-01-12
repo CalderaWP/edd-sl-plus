@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: josh
- * Date: 1/10/17
- * Time: 8:18 PM
- */
 
 namespace calderawp\eddslplus\handlers;
 
@@ -12,6 +6,13 @@ namespace calderawp\eddslplus\handlers;
 use calderawp\eddslplus\handlers\interfaces\checkable;
 use calderawp\eddslplus\handlers\interfaces\downloadable;
 
+/**
+ * Class license
+ *
+ * Base class that single license view and download response classes use
+ *
+ * @package calderawp\eddslplus\handlers
+ */
 abstract class license extends base implements checkable, downloadable {
 
 
@@ -20,9 +21,6 @@ abstract class license extends base implements checkable, downloadable {
 		$this->user = $user;
 		$this->set_license_id();
 	}
-
-
-
 
 
 }

@@ -1,16 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: josh
- * Date: 1/10/17
- * Time: 9:01 PM
- */
 
 namespace calderawp\eddslplus\handlers;
 
 
 use calderawp\eddslplus\handlers\interfaces\checkable;
 
+/**
+ * Class base
+ *
+ * Base class for all license response handlers
+ *
+ * @package calderawp\eddslplus\handlers
+ */
 abstract class base implements checkable{
 	/** @var  \WP_User */
 	protected $user;
@@ -20,10 +21,20 @@ abstract class base implements checkable{
 	/** @var  string */
 	protected $code;
 
+	/**
+	 * Find license ID by code and set in license_id property
+	 *
+	 */
 	protected function set_license_id(){
 		$this->license_id = \EDD_Software_Licensing::instance()->get_license_by_key( $this->code );
 	}
 
+	/**
+	 * Check if user is authorized for this download
+	 *
+	 * @return bool
+	 * @throws \Exception
+	 */
 	public function check_user() {
 		if ( ! is_object( $this->user ) ) {
 			throw new \Exception( __( 'No user provided to verify code', 'cwp-edd-sl-pro' ) );

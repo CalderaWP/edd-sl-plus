@@ -1,18 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: josh
- * Date: 1/10/17
- * Time: 8:17 PM
- */
 
 namespace calderawp\eddslplus\handlers;
 
 
-use CalderaWP\EDD\SL\file;
-
+/**
+ * Class download
+ *
+ * Response handler for file downloads
+ *
+ * @package calderawp\eddslplus\handlers
+ */
 class download extends license {
 
+	/**
+	 * Get URL for the file
+	 *
+	 * @return string
+	 * @throws \Exception
+	 */
 	public function file(){
 		$download_id = $this->get_download_id();
 		$payment_id = \EDD_Software_Licensing::instance()->get_payment_id( $this->license_id );
@@ -30,12 +35,6 @@ class download extends license {
 		}
 	}
 
-	public function get_template(){
 
-	}
-
-	public function download(){
-		$files = $this->download();
-	}
 
 }

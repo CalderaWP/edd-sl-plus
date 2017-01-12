@@ -1,19 +1,27 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: josh
- * Date: 1/10/17
- * Time: 9:17 PM
- */
 
 namespace calderawp\eddslplus\cf;
 
 
 use calderawp\eddslplus\handlers\download;
 
+/**
+ * Class processor
+ *
+ * Caldera Forms processor base class
+ *
+ * @package calderawp\eddslplus\cf
+ */
 class processor extends \Caldera_Forms_Processor_Processor {
 
+	/**
+	 * @var string
+	 */
 	protected $file;
+
+	/**
+	 * @inheritdoc
+	 */
 	public function pre_processor( array $config, array $form, $proccesid ) {
 		$this->set_data_object_initial( $config, $form );
 		$check_user = $this->data_object->get_value( 'user-check' );
@@ -43,7 +51,9 @@ class processor extends \Caldera_Forms_Processor_Processor {
 		}
 	}
 
-
+	/**
+	 * @inheritdoc
+	 */
 	public function processor( array $config, array $form, $proccesid ) {
 		$this->set_data_object_from_transdata( $proccesid );
 		$code = $this->data_object->get_value( 'code-field' );
@@ -84,5 +94,6 @@ class processor extends \Caldera_Forms_Processor_Processor {
 
 			return $notices;
 		});
+
 	}
 }
