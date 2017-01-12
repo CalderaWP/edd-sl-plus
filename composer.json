@@ -5,7 +5,7 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "git",
+      "type": "vcs",
       "url": "https://github.com/CalderaWP/cf-edd-fields"
     }
   ],
